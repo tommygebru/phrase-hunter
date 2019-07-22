@@ -33,12 +33,12 @@ constructor(){
 //and not use the chosen or wrong CSS classes.
 //Reset all of the heart images (i.e. the player's lives) in the scoreboard
 //at the bottom of the gameboard to display the liveHeart.png image.
-$("#btn__reset").click(() => {
+//$("#btn__reset").click(() => {
 //hide overlay
-$("#overlay h2").hide();
+//$("#overlay h2").hide();
 
 //change background color
-});//click
+//});//click
 
 
 

@@ -16,9 +16,9 @@ console.log(splitLetters);
 //const addListItem =
 //console.log("listItems", listItems);
 for(let i=0; i<splitLetters.length; i++){
-let item = `<li>${splitLetters[i]}</li>`;
+let item = `<li class="show letter ${splitLetters[i]}">${splitLetters[i]}</li>`;
 console.log(item);
-//document.querySelector("#phrase ul").append(item);
+document.querySelector("#phrase ul").append(item);
 ////let listItems = document.querySelectorAll("#phrase li");////illogical
 ////listItem[i] = splitLetters[i];
 console.log(i, splitLetters[i]);
@@ -41,9 +41,19 @@ showMatchedLetter(){//reveals the letter(s) on the board that matches the player
 //let rand = Math.floor(Math.random() * arr.length);
 //let randSplit = arr[rand].toLowerCase().split("");
 //console.log(randSplit);
-const test = new Phrase("up & DOWN");
-test.addPhraseToDisplay();
+
 
 //console.log(test.lowercase);
 //const test2 = new Phrase(randSplit);
 //console.log(test2.addPhraseToDisplay());
+let btnReset = document.getElementById("btn__reset");
+btnReset.addEventListener("click", ()=>{
+event.target.parentNode.remove();
+});
+//hide overlay
+
+
+//console.log(btnReset);
+//btnReset.remove();
+const test = new Phrase();
+test.addPhraseToDisplay();
