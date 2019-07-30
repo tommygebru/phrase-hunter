@@ -1,27 +1,20 @@
 /***************************************
    C L A S S   P H R A S E
 ***************************************/
-let Phrase = class Phrase {
-  constructor(phrase){
-  this.phrase = phrase;
-}//constructor
-//becomeLowercase(){return this.phrase.toLowerCase();}//method
-//get lowercase(){return this.becomeLowercase();}//get method
+let Phrase = class Phrase {constructor(phrase){this.phrase = phrase;}//constructor
+
 addPhraseToDisplay(){
 const arr = ["PooDLe", "muTT", "TeRRieR", "BaSeNJi", "BeaGLe"];
 let rand = Math.floor(Math.random() * arr.length);
-let randLetters = arr[rand].toLowerCase();
-let splitLetters = randLetters.split("");
-console.log(splitLetters);
-//const addListItem =
-//console.log("listItems", listItems);
-for(let i=0; i<splitLetters.length; i++){
-let item = `<li class="show letter ${splitLetters[i]}">${splitLetters[i]}</li>`;
+let isWord = arr[rand].toLowerCase();
+let keys = isWord.split("");
+console.log(keys);
+for(let i=0; i<keys.length; i++){
+let key = keys[i];
+let item = `<li class="show letter ${key}">${key}</li>`;
 console.log(item);
 document.querySelector("#phrase ul").append(item);
-////let listItems = document.querySelectorAll("#phrase li");////illogical
-////listItem[i] = splitLetters[i];
-console.log(i, splitLetters[i]);
+console.log(i, key);
 }
 //#phrase ul
 //append li
